@@ -1,0 +1,14 @@
+.NavbarItem {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.Navbar_nav {
+    width: 100%;
+    justify-content: flex;
+}
+
+.Logo {
+    width: 3rem;
+}

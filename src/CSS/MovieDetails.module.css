@@ -1,0 +1,40 @@
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.title  {
+    max-width: 400px ;
+    margin: 15px;
+    height: auto;
+    height: 80%;
+    color: gold;
+}
+
+.movieImage {
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+}
+
+
+.movieDetails {
+    text-align: auto;
+    font-size: 1.2rem;
+    color: rgb(224, 224, 224);
+}
+
+.firstItem {
+    margin-top: 0;
+}
+
+.link {
+    color: blueviolet;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1.5rem;
+}

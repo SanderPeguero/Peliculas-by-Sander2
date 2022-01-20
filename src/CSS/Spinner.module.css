@@ -1,0 +1,26 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20%;
+    margin-bottom: 10px;
+}
+
+.spinning {
+    height: 65px;
+    width: 75px;
+    animation: spinner 1.7s infinite;
+}
+
+@media (max-width: 560px) {
+    .spinner {
+        margin-top: 50%;
+    }
+
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
