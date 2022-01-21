@@ -34,7 +34,7 @@ const Navbar = () => {
             </ul>
             <div className="flex relative">
                 {toggleMenu 
-                    ? <AiOutlineClose fontSize={28} className="text-white lg:hidden cursor-pointer" onClick={() => setToggleMenu(false)}/>
+                    ? <div></div>
                     : <HiMenuAlt4 fontSize={28} className="text-white lg:hidden cursor-pointer" onClick={() => setToggleMenu(true)}/>    
                 }
                 {toggleMenu && (
@@ -43,7 +43,7 @@ const Navbar = () => {
                             flex flex-col justify-start items-end rounded-lg blue-glassmorphism text-white animate-slide-in
                         "
                     >
-                        <li className="text-xl w-full my-2">
+                        <li className="text-xl w-3/12  my-2">
                             <AiOutlineClose onClick={() => setToggleMenu(false)}/>
                         </li>
                         {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
