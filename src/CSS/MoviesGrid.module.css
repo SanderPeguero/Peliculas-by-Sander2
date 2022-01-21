@@ -2,8 +2,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 230px);
     gap: 40px;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 10px;
     justify-content: center;
+    overflow: hidden;
 }
 
 
@@ -15,6 +17,12 @@
         gap: 40px;
         padding: 40px;
         justify-content: center;
+        overflow: hidden;
     }
 
+}
+
+
+.Infinite{
+    overflow: hidden;
 }

@@ -3,12 +3,15 @@
     list-style: none;
     font-size: 1.3rem;
     text-align: -webkit-center;
+    overflow:-moz-hidden-unscrollable;
 }
 
 
 .MovieImage {
     border-radius: 10px;
-    background-color: gray;    
+    background-color: gray;  
+    overflow: hidden;
+    
 }
 
 .MovieImage:hover {
@@ -20,5 +23,6 @@
     .MoviesImage {
         width: 80%;
         height: auto;
+        overflow: hidden;
     }
 }

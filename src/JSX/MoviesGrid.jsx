@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
 import styles from "../CSS/MoviesGrid.module.css";
+import estilos from "../CSS/Spinner.module.css";
 import { get } from "../Api.js";
 import { Spinner } from "./Spinner.jsx";
 import { useQuery } from "./Hooks/useQuery";
@@ -15,6 +16,7 @@ export function MoviesGrid() {
   const query = useQuery();
   const search = query.get("search"); 
   
+  
   useEffect(() => {  
     const searchUrl = search 
     ? "/search/movie?query=" + search + "&page=" + page
@@ -27,19 +29,22 @@ export function MoviesGrid() {
 
 
     return( 
-      <InfiniteScroll 
-      dataLength={Movies.length} 
-      hasMore={has_More} 
-      next={() => setPage((prevPage) => prevPage + 1)}
-      loader={<Spinner/>}
-      >
-
-      <ul className={styles.MoviesGrid}>
-        {Movies.map((movie) => (
-            <MovieCard key = {movie.id } movie = {movie}></MovieCard>
-        ))}
-      </ul>
-
-      </InfiniteScroll>
+        <InfiniteScroll 
+          dataLength={Movies.length} 
+          next={() => setPage((prevPage) => prevPage + 1)}
+          hasMore={has_More} 
+          loader={
+            <div className={estilos.bottomSpinner}>
+              <Spinner/>
+            </div>
+          }
+          style={{ overflow: 'hidden'}}
+        >
+          <ul className={styles.MoviesGrid}>
+            {Movies.map((movie) => (
+              <MovieCard key = {movie.id } movie = {movie}></MovieCard>
+              ))}
+          </ul>
+        </InfiniteScroll>   
     );
 }

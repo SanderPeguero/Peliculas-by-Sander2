@@ -24,9 +24,10 @@ export function Search() {
                 <input 
                     className={Styles.searchInput} 
                     type="text" value={search} 
+                    placeholder="search"
                     onChange={(e) => {
-                        const value = e.target.value;
-                        navigate("/?search=" + value);
+                        const valor = e.target.value;
+                        navigate("/?search=" + valor);
                     }}
                     />
                  <ImSearch className={Styles.searchButton}/>

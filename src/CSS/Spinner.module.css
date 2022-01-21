@@ -2,19 +2,25 @@
     display: flex;
     justify-content: center;
     color: white;
-    margin-top: 20%;
-    margin-bottom: 10px;
+    margin: 20rem;
+    overflow: hidden;
 }
 
 .spinning {
-    height: 65px;
+    height: 70px;
     width: 75px;
     animation: spinner 1.7s infinite;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 860px) {
     .spinner {
-        margin-top: 50%;
+        margin-top: 15rem;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 }
@@ -23,4 +29,11 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.bottomSpinner{
+    margin: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
