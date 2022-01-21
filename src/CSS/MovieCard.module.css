@@ -2,7 +2,7 @@
     color: white;
     list-style: none;
     font-size: 1.3rem;
-    text-align: center;
+    text-align: -webkit-center;
 }
 
 

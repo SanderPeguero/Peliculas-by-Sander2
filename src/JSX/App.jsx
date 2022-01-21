@@ -7,7 +7,7 @@ import Navbar from "./Navbar.jsx";
 export function App() {
     return (
         <Router>
-            <header>
+            <header className="mt-4">
                 <Link to="/"> 
                     < Navbar/>
                 </Link>
