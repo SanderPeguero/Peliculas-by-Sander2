@@ -17,11 +17,11 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <nav className="w-full flex md:justify-center justify-between items-center p-4">
-            <div className="md:flex-[0.5] flex-initial justify-center items-center">
+        <nav className="w-full flex lg:justify-center justify-between items-center p-4">
+            <div className="lg:flex-[0.5] flex-initial justify-center items-center">
                 <img src={ logo } alt="logo" className="w-12 cursor-pointer"/>
             </div>
-            <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initia;">
+            <ul className="text-white lg:flex hidden list-none flex-row justify-between items-center flex-initia;">
                 {["SanderCoin","Market", "Exchange", "Images", "Movies", "Music"].map((item, index) => (
                     <NavbarItem key={item + index} title={item}/>
                 ))}
@@ -34,13 +34,13 @@ const Navbar = () => {
             </ul>
             <div className="flex relative">
                 {toggleMenu 
-                    ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)}/>
-                    : <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)}/>    
+                    ? <AiOutlineClose fontSize={28} className="text-white lg:hidden cursor-pointer" onClick={() => setToggleMenu(false)}/>
+                    : <HiMenuAlt4 fontSize={28} className="text-white lg:hidden cursor-pointer" onClick={() => setToggleMenu(true)}/>    
                 }
                 {toggleMenu && (
                     <ul
-                        className="z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2x1 md:hidden list-none 
-                            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in
+                        className="z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2x1 lg:hidden list-none 
+                            flex flex-col justify-start items-end rounded-lg blue-glassmorphism text-white animate-slide-in
                         "
                     >
                         <li className="text-xl w-full my-2">
