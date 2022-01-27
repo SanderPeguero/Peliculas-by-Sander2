@@ -4,12 +4,12 @@
     "display": "fullscreen",
     "icons": [
       {
-        "src": "GatoLogo.svg",
-        "sizes": "192x192",
-        "type": "image/svg"
+        "src": "MobileIcon.png",
+        "sizes": "180x180",
+        "type": "image/png"
       }
     ],
     "name": "Sander Peliculas 2",
-    "short_name": "Peliculas2",
+    "short_name": "Peliculas 2",
     "start_url": "/"
   }
