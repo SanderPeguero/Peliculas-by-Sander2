@@ -4,7 +4,7 @@
     "display": "fullscreen",
     "icons": [
       {
-        "src": "Images/GatoLogo.svg",
+        "src": "GatoLogo.svg",
         "sizes": "192x192",
         "type": "image/svg"
       }
