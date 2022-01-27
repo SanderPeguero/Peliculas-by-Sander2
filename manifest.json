@@ -1,15 +1,16 @@
 {
-    "background_color": "black",
+    "background_color": "#000000",
     "description": "Sander Peliculas. Una solucion para cuando no encuentras que ver.",
     "display": "fullscreen",
     "icons": [
       {
         "src": "./MobileIcon.png",
-        "sizes": "180x180",
+        "sizes": "64x64 32x32 24x24 16x16",
         "type": "image/png"
       }
     ],
     "name": "Sander Peliculas 2",
     "short_name": "Peliculas 2",
-    "start_url": "/"
+    "start_url": "/",
+    "theme_color": "#000000"
   }
