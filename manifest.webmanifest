@@ -4,7 +4,7 @@
     "display": "fullscreen",
     "icons": [
       {
-        "src": "MobileIcon.png",
+        "src": "./MobileIcon.png",
         "sizes": "180x180",
         "type": "image/png"
       }
