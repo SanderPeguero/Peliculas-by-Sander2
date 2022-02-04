@@ -8,9 +8,7 @@ export function App() {
     return (
         <Router>
             <header className="mt-4 overflow-hidden">
-                <Link to="/"> 
-                    < Navbar/>
-                </Link>
+                < Navbar/>
             </header>
             <main className="overflow-hidden">
                 <Routes>
