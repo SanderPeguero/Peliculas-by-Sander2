@@ -19,7 +19,9 @@ const Navbar = () => {
     return (
         <nav className="w-full flex lg:justify-center justify-between items-center p-4">
             <div className="lg:flex-[0.5] flex-initial justify-center items-center">
-                <img src={ logo } alt="logo" className="w-14 cursor-pointer"/>
+                <a href="/">
+                    <img src={ logo } alt="logo" className="w-14 cursor-pointer"/>
+                </a>
             </div>
             <ul className="text-white lg:flex hidden list-none flex-row justify-between items-end flex-initia;">
                 {["SanderCoin","Market", "Exchange", "Images", "Movies", "Music"].map((item, index) => (
