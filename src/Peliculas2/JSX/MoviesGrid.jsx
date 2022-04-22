@@ -2,20 +2,20 @@ import { useEffect, useState } from "react";
 import { MovieCard } from "./MovieCard";
 import styles from "../CSS/MoviesGrid.module.css";
 import estilos from "../CSS/Spinner.module.css";
-import { get } from "../Api.js";
+import { get } from "../../Api.js";
 import { Spinner } from "./Spinner.jsx";
 import { useQuery } from "./Hooks/useQuery";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 
 export function MoviesGrid() {
+
   const [Movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [has_More, sethas_More] = useState(true);
 
   const query = useQuery();
   const search = query.get("search"); 
-  
   
   useEffect(() => {  
     const searchUrl = search 
@@ -27,24 +27,30 @@ export function MoviesGrid() {
     });
   }, [search, page]);
 
+  return( 
+    <>
+      <InfiniteScroll 
+        dataLength={Movies.length} 
+        next={() => setPage((prevPage) => prevPage + 1)}
+        hasMore={has_More} 
+        loader={
+          <div className={estilos.bottomSpinner}>
+            <Spinner/>
+          </div>
+        }
+        style={{ 
+          overflow: 'hidden',
+          marginBottom: '300px'
+      }}
+      >
+        <ul className={styles.MoviesGrid}>
+          {Movies.map((movie) => (
+            <MovieCard key = {movie.id } movie = {movie}></MovieCard>
+            ))}
+        </ul>
+      </InfiniteScroll>
+      {/* <Spinner/> */}
+    </>   
+  );
 
-    return( 
-        <InfiniteScroll 
-          dataLength={Movies.length} 
-          next={() => setPage((prevPage) => prevPage + 1)}
-          hasMore={has_More} 
-          loader={
-            <div className={estilos.bottomSpinner}>
-              <Spinner/>
-            </div>
-          }
-          style={{ overflow: 'hidden'}}
-        >
-          <ul className={styles.MoviesGrid}>
-            {Movies.map((movie) => (
-              <MovieCard key = {movie.id } movie = {movie}></MovieCard>
-              ))}
-          </ul>
-        </InfiniteScroll>   
-    );
 }

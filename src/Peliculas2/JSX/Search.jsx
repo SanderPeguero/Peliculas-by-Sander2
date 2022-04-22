@@ -23,7 +23,7 @@ export function Search() {
             <div className={Styles.searchBox}>
                 <input 
                     className={Styles.searchInput} 
-                    type="text" value={search} 
+                    type="text" value={search ? search : ""} 
                     placeholder="search"
                     onChange={(e) => {
                         const valor = e.target.value;

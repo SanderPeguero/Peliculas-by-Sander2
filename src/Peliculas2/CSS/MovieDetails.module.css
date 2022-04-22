@@ -23,7 +23,7 @@
 .movieDetails {
     text-align: auto;
     font-size: 1.2rem;
-    color: rgb(224, 224, 224);
+    color: rgb(255, 255, 255);
 }
 
 .firstItem {
@@ -35,6 +35,6 @@
 }
 
 .subtitle {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
 }
