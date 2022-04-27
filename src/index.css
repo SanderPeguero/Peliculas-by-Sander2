@@ -4,6 +4,7 @@
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --transition-speed: 600ms;
+    --transition-speed2: 1000ms;
 }
 
 body {
@@ -73,17 +74,24 @@ main {
 
 .link-text {
     display: none;
-    margin-left: 1rem;
+    margin-left: 1.4rem;
 }
 
 .nav-link svg {
+    width: 1.8rem;
+    min-width: 1.8rem;
+    margin: 0 1.5rem;
+}
+
+.nav-link img {
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
 }
 
 .fa-primary {
-    color: #ff7eee;
+    /* color: #ff7eee; */
+    color: #00ecfd;
 }
 
 .fa-secondary {
@@ -107,7 +115,11 @@ main {
     width: 100%;
 }
 
-.logo svg {
+.GatoLogo{
+    color: #ff7eee;
+}
+
+.logo img {
     transform: rotate(0deg);
     transition: var(--transition-speed);
 }
@@ -119,8 +131,8 @@ main {
     transition: var(--transition-speed);
 }
 
-.navbar:hover .logo svg {
-    transform: rotate(-180deg);
+.navbar:hover .logo img {
+    transform: rotate(-360deg);
 }
 
 /* Small screens */
@@ -164,7 +176,7 @@ main {
         display: inline;
     }
 
-    .navbar:hover .logo svg
+    .navbar:hover .logo img
     {
         margin-left: 11rem;
     }
