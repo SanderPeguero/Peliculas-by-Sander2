@@ -5,9 +5,9 @@ import { auth } from "../firebase"
 
 const AuthContext = React.createContext()
 
-export function useAuth() { return useContext(AuthContext) }
+function useAuth() { return useContext(AuthContext) }
 
-export function AuthProvider({ children }){
+const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
     const [user, setUser] = useState()
     const history = useNavigate()
@@ -38,3 +38,6 @@ export function AuthProvider({ children }){
         </AuthContext.Provider>
     )
 }
+
+
+export {AuthProvider, useAuth };
