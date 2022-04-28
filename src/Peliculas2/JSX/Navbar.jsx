@@ -16,7 +16,7 @@ const Navbar = () => {
         <nav className="navbar">
             <ul className="navbar-nav">
                 <li className="logo">
-                    <a href="/" className="nav-link">
+                    <a href="#/" className="nav-link">
                         <span className="link-text logo-text">SCoin</span>
                         {/* <svg
                             aria-hidden="true"
@@ -56,7 +56,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item">
-                    <a href="wallet" className="nav-link">
+                    <a href="#/wallet" className="nav-link">
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path 
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item">
-                    <a href="/movies" className="nav-link">
+                    <a href="#/movies" className="nav-link">
                     
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path
@@ -86,7 +86,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="nav-item">
-                    <a href="/chat" className="nav-link">
+                    <a href="#/chat" className="nav-link">
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <path 

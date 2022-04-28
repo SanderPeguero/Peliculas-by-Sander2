@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Link}   from "react-router-dom"
+import {HashRouter as Router, Routes, Route, Link}   from "react-router-dom"
 import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
@@ -17,14 +17,14 @@ export function App() {
             </header>
             <main className="overflow-hidden">
                     <Routes>
-                        <Route path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
-                        <Route path='/movies' element={<Home/>}></Route>
+                        <Route exact path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
+                        <Route exact path='/movies' element={<Home/>}></Route>
                         <Route exact path='/chat' element={
                             <AuthProvider>
                                 <Chats/>
                             </AuthProvider>
                         }></Route>
-                        <Route exact path='/' element={
+                        <Route exact path='/login' element={
                             <AuthProvider>
                                 <Login/>
                             </AuthProvider>
