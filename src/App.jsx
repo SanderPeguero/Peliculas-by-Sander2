@@ -25,10 +25,10 @@ export function App() {
                             </AuthProvider>
                         }></Route> */}
                         <Route exact path='/' element={
-                            // <AuthProvider>
+                            <AuthProvider>
                                 <Login/>
                                 // Sander
-                            // </AuthProvider>
+                            </AuthProvider>
                         }></Route>
                     </Routes>
             </main>
