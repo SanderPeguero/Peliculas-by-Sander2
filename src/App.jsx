@@ -5,7 +5,7 @@ import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
 import Chats from './Chat/components/Chats'
 import Login from './Chat/components/Login'
-import { AuthProvider } from './Chat/contexts/AuthProvider'
+// import { AuthProvider } from './Chat/contexts/AuthProvider'
 
 
 export function App() {
@@ -20,14 +20,14 @@ export function App() {
                         <Route exact path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
                         <Route exact path='/' element={<Home/>}></Route>
                         <Route exact path='/chat' element={
-                            <AuthProvider>
+                            // <AuthProvider>
                                 <Chats/>
-                            </AuthProvider>
+                            // </AuthProvider>
                         }></Route>
                         <Route exact path='/login' element={
-                            <AuthProvider>
+                            // <AuthProvider>
                                 <Login/>
-                            </AuthProvider>
+                            // </AuthProvider>
                         }></Route>
                     </Routes>
             </main>
