@@ -1,7 +1,7 @@
 import { useQuery } from "./Hooks/useQuery";
 import { useDebounce } from "./Hooks/useDebounce";
 import { MoviesGrid } from "./MoviesGrid";
-
+import { Search } from "./Search.jsx";
 
 export function Home() {
     const query = useQuery();
@@ -11,6 +11,7 @@ export function Home() {
 
     return (
         <div id="home" className="overflow-hidden">
+            <Search/>
             <MoviesGrid key={debouncedSearch} search={debouncedSearch}/>
         </div>
     );  

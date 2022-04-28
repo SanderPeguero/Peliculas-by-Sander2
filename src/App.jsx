@@ -3,6 +3,9 @@ import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
+import Chats from './Chat/components/Chats'
+import Login from './Chat/components/Login'
+import AuthProvider from './Chat/contexts/AuthProvider'
 
 
 export function App() {
@@ -13,10 +16,20 @@ export function App() {
                 <Navbar/>
             </header>
             <main className="overflow-hidden">
-                <Routes>
-                    <Route path="/movies/:movieId" element={ <ModalPeliculas/> }> </Route>
-                    <Route exact path="/" element={<Home/>}></Route>
-                </Routes>
+                    <Routes>
+                        <Route exact path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
+                        <Route exact path='/movies' element={<Home/>}></Route>
+                        <Route exact path='/chat' element={
+                            <AuthProvider>
+                                <Chats/>
+                            </AuthProvider>
+                        }></Route>
+                        <Route exact path='/login' element={
+                            <AuthProvider>
+                                <Login/>
+                            </AuthProvider>
+                        }></Route>
+                    </Routes>
             </main>
        </Router>
     );
