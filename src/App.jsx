@@ -18,13 +18,13 @@ export function App() {
             <main className="overflow-hidden">
                     <Routes>
                         <Route exact path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
-                        <Route exact path='/' element={<Home/>}></Route>
+                        <Route exact path='/movies' element={<Home/>}></Route>
                         {/* <Route exact path='/chat' element={
                             <AuthProvider>
                                 <Chats/>
                             </AuthProvider>
                         }></Route> */}
-                        <Route exact path='/login' element={
+                        <Route exact path='/' element={
                             // <AuthProvider>
                                 <Login/>
                                 // Sander
