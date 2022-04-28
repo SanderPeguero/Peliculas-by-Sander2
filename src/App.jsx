@@ -27,7 +27,6 @@ export function App() {
                         <Route exact path='/' element={
                             <AuthProvider>
                                 <Login/>
-                                // Sander
                             </AuthProvider>
                         }></Route>
                     </Routes>
