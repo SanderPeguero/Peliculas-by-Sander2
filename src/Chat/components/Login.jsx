@@ -1,4 +1,4 @@
-// import { GoogleOutlined } from '@ant-design/icons'
+import { GoogleOutlined } from '@ant-design/icons'
 
 import firebase from 'firebase/compat/app';
 
@@ -14,7 +14,7 @@ export default function Login(){
                     className ='login-button google'
                     onClick={() => auth.signInWithRedirect( new firebase.auth.GoogleAuthProvider())}
                 >
-                    {/* <GoogleOutlined/>  */}
+                    <GoogleOutlined/> 
                     Sign In with Google
                 </div>
 

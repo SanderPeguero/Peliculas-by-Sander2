@@ -4,8 +4,8 @@ import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
 // import Chats from './Chat/components/Chats'
-// import Login from './Chat/components/Login'
-// import { AuthProvider } from './Chat/contexts/AuthProvider'
+import Login from './Chat/components/Login'
+import { AuthProvider } from './Chat/contexts/AuthProvider'
 
 
 export function App() {
@@ -23,12 +23,13 @@ export function App() {
                             <AuthProvider>
                                 <Chats/>
                             </AuthProvider>
-                        }></Route>
-                        <Route exact path='/login' element={
-                            <AuthProvider>
-                                <Login/>
-                            </AuthProvider>
                         }></Route> */}
+                        <Route exact path='/login' element={
+                            // <AuthProvider>
+                                <Login/>
+                                // Sander
+                            // </AuthProvider>
+                        }></Route>
                     </Routes>
             </main>
        </Router>
