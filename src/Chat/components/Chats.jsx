@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-// import { ChatEngine } from 'react-chat-engine'
+import { ChatEngine } from 'react-chat-engine';
 
 import { useAuth } from '../contexts/AuthProvider'
 import { auth } from  '../firebase'
@@ -86,14 +86,13 @@ export default function Chats(){
             </div>
             
             <div>
-                {/* <ChatEngine 
-                    height='calc(100vh - 66px'
+                <ChatEngine 
+                    // height='calc(100vh - 66px'
                     projectID={"c08e4699-54f7-4eb4-b0f3-ef78b32cf45e"}
                     userName={user.email}
                     userSecret={user.uid}
-                /> */}
+                />
 
-                CHAT ENGINE
             </div>
         {/* </useAuth> */}
         {/* </> */}
