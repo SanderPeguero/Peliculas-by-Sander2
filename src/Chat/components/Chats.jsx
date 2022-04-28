@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 
-import axios from 'axios'
+import { get, post } from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { ChatEngine } from 'react-chat-engine'
 
@@ -33,7 +33,7 @@ export default function Chats(){
                 return
             }
 
-            axios.get(
+            get(
                 'https://api.chatengine.io/users/me',
                 { headers: { 
                   "project-id": "c08e4699-54f7-4eb4-b0f3-ef78b32cf45e",
@@ -54,7 +54,7 @@ export default function Chats(){
                 .then(avatar => {
                     formdata.append('avatar', avatar, avatar.name)
 
-                    axios.post(
+                    post(
                         'https://api.chatengine.io/users',
                         formdata,
                         { headers: { "private-key": "ba4ccd61-0347-463f-98d4-3d15130a5999"}}

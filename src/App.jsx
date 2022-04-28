@@ -3,7 +3,7 @@ import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
-// import Chats from './Chat/components/Chats'
+import Chats from './Chat/components/Chats'
 import Login from './Chat/components/Login'
 import { AuthProvider } from './Chat/contexts/AuthProvider'
 
@@ -19,11 +19,11 @@ export function App() {
                     <Routes>
                         <Route path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
                         <Route path='/movies' element={<Home/>}></Route>
-                        {/* <Route exact path='/chat' element={
+                        <Route exact path='/chat' element={
                             <AuthProvider>
                                 <Chats/>
                             </AuthProvider>
-                        }></Route> */}
+                        }></Route>
                         <Route exact path='/' element={
                             <AuthProvider>
                                 <Login/>
