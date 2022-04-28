@@ -332,6 +332,9 @@ main {
     left: calc(50vw - 33px);
     top: calc(50vh - 22px);
 }
+.chats-page {
+    color: black;
+}
 
 .anticon svg{
     display: block;
