@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 
 import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { ChatEngine } from 'react-chat-engine'
 
 import { useAuth } from '../contexts/AuthProvider'
@@ -12,63 +12,63 @@ export default function Chats(){
     const didMountRef = useRef(false)
     const [loading, setLoading] = useState(true)
     const { user } = useAuth()
-    // const history = useNavigate()
+    const history = useNavigate()
 
     async function handleLogout(){
-        // await auth.signOut()
-        // history("/")
+        await auth.signOut()
+        history("/")
     }
 
-    // const getFile = async (url) => {
-    //     let response = await fetch(url)
-    //     let data = await response.blob()
-    //     return new File([data], "text.jpg", {type: 'image/jpeg'})
-    // }
+    const getFile = async (url) => {
+        let response = await fetch(url)
+        let data = await response.blob()
+        return new File([data], "text.jpg", {type: 'image/jpeg'})
+    }
 
-    // useEffect( () => {
-    //     if(!didMountRef.current) {
-    //         didMountRef.current = true
+    useEffect( () => {
+        if(!didMountRef.current) {
+            didMountRef.current = true
 
-    //         if(!user || user == null) {
-    //             history("/login")
-    //             return
-    //         }
+            if(!user || user == null) {
+                history("/login")
+                return
+            }
 
-    //         axios.get(
-    //             'https://api.chatengine.io/users/me',
-    //             { headers: { 
-    //               "project-id": "c08e4699-54f7-4eb4-b0f3-ef78b32cf45e",
-    //               "user-name": user.email,
-    //               "user-secret": user.uid
-    //             }}  
-    //         )
+            axios.get(
+                'https://api.chatengine.io/users/me',
+                { headers: { 
+                  "project-id": "c08e4699-54f7-4eb4-b0f3-ef78b32cf45e",
+                  "user-name": user.email,
+                  "user-secret": user.uid
+                }}  
+            )
 
-    //         .then(() => setLoading(false))
+            .then(() => setLoading(false))
 
-    //         .catch(e => {
-    //             let formdata = new FormData()
-    //             formdata.append('email', user.email)
-    //             formdata.append('username', user.email)
-    //             formdata.append('secret', user.uid)
+            .catch(e => {
+                let formdata = new FormData()
+                formdata.append('email', user.email)
+                formdata.append('username', user.email)
+                formdata.append('secret', user.uid)
 
-    //             getFile(user.photoURL)
-    //             .then(avatar => {
-    //                 formdata.append('avatar', avatar, avatar.name)
+                getFile(user.photoURL)
+                .then(avatar => {
+                    formdata.append('avatar', avatar, avatar.name)
 
-    //                 axios.post(
-    //                     'https://api.chatengine.io/users',
-    //                     formdata,
-    //                     { headers: { "private-key": "ba4ccd61-0347-463f-98d4-3d15130a5999"}}
-    //                 )
-    //                 .then(() => setLoading(false))
-    //                 .catch(e => console.log('e', e.response))
-    //             })
-    //         })
-    //     }
-    // }, [user, history])
+                    axios.post(
+                        'https://api.chatengine.io/users',
+                        formdata,
+                        { headers: { "private-key": "ba4ccd61-0347-463f-98d4-3d15130a5999"}}
+                    )
+                    .then(() => setLoading(false))
+                    .catch(e => console.log('e', e.response))
+                })
+            })
+        }
+    }, [user, history])
 
 
-    // if (!user || loading ) return <div/>
+    if (!user || loading ) return <div/>
 
     return (
         <div className = 'chats-page'>
