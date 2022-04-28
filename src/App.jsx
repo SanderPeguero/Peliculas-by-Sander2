@@ -17,8 +17,8 @@ export function App() {
             </header>
             <main className="overflow-hidden">
                     <Routes>
-                        <Route exact path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
-                        <Route exact path='/movies' element={<Home/>}></Route>
+                        <Route path='/movies/:movieId' element={ <ModalPeliculas/> }> </Route>
+                        <Route path='/movies' element={<Home/>}></Route>
                         {/* <Route exact path='/chat' element={
                             <AuthProvider>
                                 <Chats/>
