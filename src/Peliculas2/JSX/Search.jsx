@@ -27,7 +27,7 @@ export function Search() {
                     placeholder="search"
                     onChange={(e) => {
                         const valor = e.target.value;
-                        navigate("/?search=" + valor);
+                        navigate("?search=" + valor);
                     }}
                     />
                  <ImSearch className={Styles.searchButton}/>

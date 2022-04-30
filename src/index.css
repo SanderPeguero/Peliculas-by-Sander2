@@ -35,7 +35,7 @@ main {
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
-    overflow: scroll;
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -313,8 +313,9 @@ main {
 }
 
 .google {
-    background-color: #4285f4;
+    background-color: #333333;
     color: white;
+    margin-top: 20px;
 }
 
 #loading-container {
