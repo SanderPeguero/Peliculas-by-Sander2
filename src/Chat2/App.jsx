@@ -4,17 +4,18 @@ import { useEffect, useState} from 'react';
 import { Login } from './Login';
 import { Room } from './Room';
 import { Leftbar } from './Leftbar';
+
 function App() {
   const [user, setUser] = useState(null)
   const [room, setroom] = useState(null)
-useEffect(() => {
-  if(localStorage.getItem('user')){
-    setUser(JSON.parse(localStorage.getItem('user')))
-  }
-  if(localStorage.getItem('room')){
-    setroom(localStorage.getItem('room'))
-  }
-}, [])
+  useEffect(() => {
+    if(localStorage.getItem('user')){
+      setUser(JSON.parse(localStorage.getItem('user')))
+    }
+    if(localStorage.getItem('room')){
+      setroom(localStorage.getItem('room'))
+    }
+  }, [])
 
   function setgetuser(e) {
     setUser(e)

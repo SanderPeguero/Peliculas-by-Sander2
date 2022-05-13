@@ -25,7 +25,6 @@ a {
 }
 
 
-
 main {
     margin-left: 5rem;
     /* padding: 1rem; */
@@ -339,4 +338,8 @@ main {
 
 .anticon svg{
     display: block;
+}
+
+.wallet{
+    all: unset;
 }
