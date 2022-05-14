@@ -4,9 +4,9 @@ import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
 import Chats from './Chat2/App'
-import Login from './Chat/components/Login'
+// import Login from './Chat/components/Login'
 import Wallet from './Wallet/App'
-import { ThemeProvider } from '@chakra-ui/core'
+// import { ThemeProvider } from '@chakra-ui/core'
 
 // import { AuthProvider } from './Chat/contexts/AuthProvider'
 

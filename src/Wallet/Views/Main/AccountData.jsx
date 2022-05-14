@@ -30,7 +30,7 @@ const AccountData = ({ publicKey, account }) => {
             {account?.balances.map(({ balance, asset_type}, index ) => (
 
                 <p style={{fontSize:'2rem'}}>
-                    {balance} XLM
+                    {balance} DOP
                 </p>    
 
             ))}
