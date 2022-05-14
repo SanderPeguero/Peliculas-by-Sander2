@@ -1,5 +1,5 @@
 import {HashRouter as Router, Routes, Route, Link}   from "react-router-dom"
-import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
+// import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
@@ -23,7 +23,7 @@ export function App() {
                         <Routes>
                             <Route exact path='/movies/:movieId' element={<ModalPeliculas/>}></Route>
                             <Route exact path='/movies' element={<Home/>}></Route>
-                            <Route exact path='/wallet' element={<Wallet/>}></Route>
+                            {/* <Route exact path='/wallet' element={<Wallet/>}></Route> */}
                             <Route exact path='/chat' element={<Chats/>}></Route>
                         </Routes>
                 </main>
