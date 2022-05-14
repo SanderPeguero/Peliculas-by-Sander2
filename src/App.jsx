@@ -1,4 +1,4 @@
-import {HashRouter as Router, Routes, Route, Link}   from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route, Link}   from "react-router-dom"
 // import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
