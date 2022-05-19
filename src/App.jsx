@@ -22,7 +22,7 @@ export function App() {
                             <Route exact path='/movies/:movieId' element={<ModalPeliculas/>}></Route>
                             <Route exact path='/movies' element={<Home/>}></Route>
                             {/* <Route exact path='/wallet' element={<Wallet/>}></Route> */}
-                            <Route exact path='/chat' element={<Chats/>}></Route>
+                            {/* <Route exact path='/chat' element={<Chats/>}></Route> */}
                         </Routes>
                 </main>
             </Router>
