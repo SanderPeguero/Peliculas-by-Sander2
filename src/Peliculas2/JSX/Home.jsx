@@ -10,7 +10,7 @@ export function Home() {
     const debouncedSearch = useDebounce(search, 300);
 
     return (
-        <div id="home" className="overflow-hidden">
+        <div id="home" style={{overflow: 'hidden'}}>
             <Search/>
             <MoviesGrid key={debouncedSearch} search={debouncedSearch}/>
         </div>

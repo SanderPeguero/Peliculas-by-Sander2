@@ -5,7 +5,7 @@ import SendTransaction from '../Main/SendTransaction'
 import BalanceChecker from './BalanceChecker'
 import { Box, Stack, Text, Divider } from '@chakra-ui/core'
 import { Button } from '@mui/material'
-import '../App.css'
+// import '../App.css'
 
 const Main = ({ publicKey, secret, resetAccount }) => {
     //Estado de la aplicacion con cuenta

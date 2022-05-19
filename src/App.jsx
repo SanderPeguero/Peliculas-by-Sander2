@@ -1,25 +1,23 @@
 import {BrowserRouter as Router, Routes, Route, Link}   from "react-router-dom"
-// import { MovieDetails } from "./Peliculas2/JSX/MovieDetails"
 import { ModalPeliculas } from "./Peliculas2/JSX/ModalPeliculas"
 import { Home } from "./Peliculas2/JSX/Home"
 import Navbar from "./Peliculas2/JSX/Navbar"
 import Chats from './Chat2/App'
-// import Login from './Chat/components/Login'
 import Wallet from './Wallet/App'
-// import { ThemeProvider } from '@chakra-ui/core'
-
-// import { AuthProvider } from './Chat/contexts/AuthProvider'
+import { SnackbarProvider } from 'notistack'
 
 
 export function App() {
 
     return (
-        // <ThemeProvider>
+        <SnackbarProvider>
             <Router>
-                <header className="overflow-hidden">
+            {/* className="overflow-hidden" */}
+                <header style={{overflow: 'hidden'}}>
                     <Navbar/>
                 </header>
-                <main className="overflow-hidden">
+                {/* className="overflow-hidden" */}
+                <main style={{overflow: 'hidden'}}>
                         <Routes>
                             <Route exact path='/movies/:movieId' element={<ModalPeliculas/>}></Route>
                             <Route exact path='/movies' element={<Home/>}></Route>
@@ -28,6 +26,6 @@ export function App() {
                         </Routes>
                 </main>
             </Router>
-        // </ThemeProvider>
+        </SnackbarProvider>
     );
 }

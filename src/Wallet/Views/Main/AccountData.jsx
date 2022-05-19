@@ -9,28 +9,54 @@ const AccountData = ({ publicKey, account }) => {
 
     return (
         <>
-        <div style={{display:'flex',flexDirection:'column',rowGap:'21px',alignItems:'flex-start',backgroundColor:'#252329', padding:'43px 40px', borderRadius:'8px', marginTop:'3rem'}}>
+        <div style={{
+            display:'flex',
+            flexDirection:'column',
+            rowGap:'21px',
+            alignItems:'flex-start',
+            backgroundColor:'#252329',
+            padding:'43px 40px',
+            borderRadius:'8px',
+            marginTop:'3rem'
+        }}>
 
-            <h2 style={{color:'white',fontFamily:'sans-serif',fontSize:'1.5rem'}}>
+            <h2 style={{
+                color:'white',
+                fontFamily:'sans-serif',
+                fontSize:'1.5rem'
+            }}>
                 Llave Publica
             </h2>
         
-            <div style={{ justifyContent: 'space-between'}}>
-                <Input readOnly  style={({ width:'31vw', color:'white', marginRight: '10px'})} value={publicKey}/>   
+            <div style={{
+                justifyContent: 'space-between'
+            }}>
+                <Input readOnly value={publicKey} style={{
+                    width:'31vw',
+                    color:'white',
+                    marginRight: '10px'
+                }}/>   
                 {/* <p style={{marginTop:'6px', marginRight:'10px'}}>{publicKey}</p>  */}
-                <Button h="1.75rem" size="sm" onClick={onCopy}>
+                <Button h="1.75rem" size="sm" onClick={onCopy} style={{
+                    backgroundColor:'#2f2f2f'
+                }}>
                     {hasCopied ? "Copiado" : "Copiar"}
                 </Button>
             </div>
 
-            <h2 style={{color:'white',fontFamily:'sans-serif',fontSize:'1.5rem', marginTop: '3rem'}}>
+            <h2 style={{
+                color:'white',
+                fontFamily:'sans-serif',
+                fontSize:'1.5rem',
+                marginTop: '3rem'
+            }}>
                 Balance
             </h2>
 
             {account?.balances.map(({ balance, asset_type}, index ) => (
 
                 <p style={{fontSize:'2rem'}}>
-                    {balance} DOP
+                    {balance} XCN
                 </p>    
 
             ))}

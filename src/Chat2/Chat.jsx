@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './css/chatbox.css'
+// import './css/chatbox.css'
 import './css/chatpage.css'
 import toast, { Toaster } from 'react-hot-toast';
 import { useState } from 'react';
@@ -17,6 +17,8 @@ import {red, teal } from '@mui/material/colors';
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import SendIcon from '@mui/icons-material/Send';
 import './css/Responsive.css'
+
+
 function Chat(props) {
     const [input, setInput] = useState("")
     const [message, setMessage] = useState([])
@@ -113,11 +115,23 @@ function Chat(props) {
         );
     }
     return (
-        <div className='chatbox'>
+        <div className='chatbox' style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            flex: '1',
+            position: 'relative',
+            backgroundColor: '#252329'
+        }}>
             <Toaster />
-            <div className="chat__header" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <div className="chat__header" style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center'
+            }}>
 
                 <Navbar roomid={props.roomid}></Navbar>
+
             </div>
             <div className="uploadprogress">
                 {
@@ -125,25 +139,74 @@ function Chat(props) {
                 }
             </div>
 
-            <div className="chat__body" id="custom">
+            <div className="chat__body" id="custom" style={{
+                overflowY: 'scroll',
+                overflowX: 'hidden',
+                height:'85.65%',
+                paddingBottom: '19px'
+            }}>
                 {
                     message.map((item, index) => {
                         return (
-                            <div className="messageboxcont">
-                                <img style={{ width: '38px',height:'40px', borderRadius: '7px', marginTop: '-6px',marginRight:'9px',marginLeft:'1.25vw' }} src={`https://avatars.dicebear.com/api/adventurer-neutral/${item.name}.svg`} alt="" />
+                            <div className="messageboxcont" style={{
+                                width:'80%',
+                                marginTop: '19px',
+                                marginBottom: '0px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginLeft: '28.75px',
+                                paddingTop: '6px'
+                            }}>
+                                <img src={`https://avatars.dicebear.com/api/adventurer-neutral/${item.name}.svg`} alt="" style={{
+                                    width: '38px',
+                                    height:'40px',
+                                    borderRadius: '7px',
+                                    marginTop: '-6px',
+                                    marginRight:'9px',
+                                    marginLeft:'1.25vw'
+                                }}/>
                                 <div className="messagebox">
-                                    <div style={{ display: 'flex', flexDirection: 'row',alignItems:'center' }}>
+                                    <div style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        alignItems:'center'
+                                    }}>
                                         <h5  className='fontemmm'>{item.name.split(' ')[0] + " " + item.name.split(' ')[1]}</h5>
                                         <div className="timestamp" style={{marginLeft:'11.25px',marginBottom:'-2px' }}>
-                                            <p className='tieemmm' style={{fontSize: '1.15em',color:'#828282',lineHeight:'25px',letterSpacing:'-0.035em',fontFamily:'Noto Sans' }}>{item.timestamp?.toDate().toString().slice(0, 21)}</p>
+                                            <p className='tieemmm' style={{
+                                                fontSize: '1.15em',
+                                                color:'#828282',
+                                                lineHeight:'25px',
+                                                letterSpacing:'-0.035em',
+                                                fontFamily:'Noto Sans' 
+                                            }}>
+                                                {item.timestamp?.toDate().toString().slice(0, 21)}
+                                            </p>
                                         </div>
                                     </div>
                                     {
                                         item.text.includes('http') ? (
-                                            <div className="file" style={{ border: '0px solid #616161', borderRadius: '9px', padding: '2px 2px', marginTop: '5px', backgroundColor: '', paddingBottom: '10px', overflowX: 'scroll', marginBottom: '-3px', zIndex: '99' }}>
-                                                <a key={index} href={item.text} target="_blank" className="chat__body__message" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', paddingTop: '0px', textDecoration: 'none', MarginRight: '9px', marginLeft: '-3px',marginBottom:'-3px' }}>
+                                            <div className="file" style={{
+                                                border: '0px solid #616161',
+                                                borderRadius: '9px',
+                                                padding: '2px 2px',
+                                                marginTop: '5px',
+                                                backgroundColor: '',
+                                                paddingBottom: '10px',
+                                                overflowX: 'scroll',
+                                                marginBottom: '-3px',
+                                                zIndex: '99'
+                                            }}>
+                                                <a key={index} href={item.text} target="_blank" className="chat__body__message" rel="noreferrer" style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    paddingTop: '0px',
+                                                    textDecoration: 'none',
+                                                    MarginRight: '9px',
+                                                    marginLeft: '-3px',
+                                                    marginBottom:'-3px' 
+                                                }}>
                                                     {
-
                                                         (item.filetype === "image/png" || item.filetype === "image/jpg" || item.filetype === "image/jpeg") ? (
                                                             <ImageIcon color="primary" style={{ marginRight: '6px', fontSize: '24px' }}></ImageIcon>
                                                         ) : (<></>)

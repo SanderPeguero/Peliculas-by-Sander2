@@ -6,7 +6,17 @@ const App = () => {
   return (
 
     <ThemeProvider>
-      <div className="wallet">
+      <div style={{
+        backgroundColor: '#181818',
+        // height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        transition: 'all 0.25s',
+        color: 'white',
+        // -webkit-transition: all 0.15s;
+        padding: '0'
+      }}>
         <CSSReset/>
         <Box
           display="flex"

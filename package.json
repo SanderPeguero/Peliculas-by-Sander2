@@ -20,6 +20,7 @@
     "emotion-theming": "^10.3.0",
     "firebase": "^9.6.11",
     "framer-motion": "^4.1.17",
+    "notistack": "^2.0.5",
     "pwacompat": "^2.0.17",
     "react": "^17.0.2",
     "react-chat-engine": "^1.8.13",

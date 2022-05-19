@@ -6,19 +6,6 @@ import ChatIcon from '../../Peliculas2/Images/Logo.png';
 import { Button } from '@mui/material'
 
 const Start = ({ setPublicKey, setSecret, setKeyCopied }) => {
-    const loginstyle = {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '492px',
-        margin: 'auto',
-        justifyContent: 'center',
-        alignItems:'center',
-        height: 'fit-content',
-        padding:'62px 21px',
-        backgroundColor:'#252329',
-        borderRadius:'8px',
-        textAlign:'center'
-    }
     //Este elemento sirve para crear notificaciones
     //Checar los docs en https://chakra-ui.com/toast
     const toast = useToast()
@@ -93,12 +80,47 @@ const Start = ({ setPublicKey, setSecret, setKeyCopied }) => {
             
         </InputGroup> */}
         <div className="App">
-            <div className='login' style={loginstyle}>
+            <div className='login' style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: '492px',
+                margin: 'auto',
+                justifyContent: 'center',
+                alignItems:'center',
+                height: 'fit-content',
+                padding:'62px 21px',
+                backgroundColor:'#252329',
+                borderRadius:'8px',
+                textAlign:'center'
+            }}>
                 {/* <ChatIcon color="primary" sx={{ fontSize: 120 }} ></ChatIcon> */}
                 <img src={ChatIcon} alt="" style={{ width: '5rem'}} />
-                <p style={{margin:'15px 0',fontSize:'22px',fontWeight:'400',color:'white',width:"295px",textAlign:'center'}}>Wallet</p>
-                <h2 style={{color:'white',fontWeight:'400', marginBottom:'1rem'}}>Accede a tu cuenta</h2>
-                <input  style={({  borderBottom:'ridge', outline:'none', backgroundColor:'unset', height: 'auto', width:'20vw', color:'white', marginRight: '10px'})} value={secretToImport} placeholder="Llave Privada" onChange={({ target: {value}}) => setSecretToImport(value)}/>   
+                <p style={{
+                    margin:'15px 0',
+                    fontSize:'22px',
+                    fontWeight:'400',
+                    color:'white',
+                    width:"295px",
+                    textAlign:'center'
+                }}>
+                    Wallet
+                </p>
+                <h2 style={{
+                    color:'white',
+                    fontWeight:'400',
+                    marginBottom:'1rem'
+                }}>
+                    Accede a tu cuenta
+                </h2>
+                <input value={secretToImport} placeholder="Llave Privada" onChange={({ target: {value}}) => setSecretToImport(value)} style={{
+                    borderBottom:'ridge',
+                    outline:'none',
+                    backgroundColor:'unset',
+                    height: 'auto',
+                    width:'20vw',
+                    color:'white',
+                    marginRight: '10px'
+                }}/>   
 
                 <Button onClick={importAccount} variant='contained' color='success' style={{marginTop:'1.5rem'}}>
                     Importar

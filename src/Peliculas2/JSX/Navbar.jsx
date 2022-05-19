@@ -13,7 +13,13 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return(
-        <nav className="navbar">
+        <nav className="navbar" style={{
+            position: 'fixed',
+            backgroundColor: '#23232e',
+            transition: 'width 600ms ease',
+            overflow: 'hidden',
+            zIndex: '1'
+        }}>
             <ul className="navbar-nav">
                 <li className="logo">
                     <a href="#/" className="nav-link">

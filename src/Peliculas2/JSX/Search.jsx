@@ -19,8 +19,12 @@ export function Search() {
 
 
     return (
-        <form className={Styles.searchContainer} onSubmit={handleSubmit}>
-            <div className={Styles.searchBox}>
+        <form onSubmit={handleSubmit} style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '1rem'
+        }}>
+            <div style={{ position: 'relative' }}>
                 <input 
                     className={Styles.searchInput} 
                     type="text" value={search ? search : ""} 
@@ -29,8 +33,27 @@ export function Search() {
                         const valor = e.target.value;
                         navigate("?search=" + valor);
                     }}
-                    />
-                 <ImSearch className={Styles.searchButton}/>
+                    style={{
+                        fontSize: '1.1rem',
+                        height: '30px',
+                        width: '200px',
+                        borderRadius: '10px',
+                        padding: '5px 20px 5px 10px',
+                        border: '2px solid #0d1d2e',
+                        boxShadow: '0 0 5px #0d1d2e',
+                        color: '#000000'
+                    }}
+                />
+                 <ImSearch style={{
+                     position: 'absolute',
+                     right: '10px',
+                     top: '0',
+                     cursor: 'pointer',
+                     height: '100%',
+                     color: '#000000',
+                     border: 'none',
+                     background: 'none'
+                 }}/>
             </div>
         </form>
     )
